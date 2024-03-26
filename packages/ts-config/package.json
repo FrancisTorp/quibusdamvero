@@ -1,0 +1,55 @@
+{
+	"name": "@sapphire/ts-config",
+	"version": "3.1.2",
+	"description": "Shareable TypeScript configuration for all Sapphire Communitys repositories",
+	"author": "@sapphire",
+	"license": "MIT",
+	"main": "tsconfig.json",
+	"typedocMain": "tests/index.ts",
+	"exports": {
+		"import": "./tsconfig.json",
+		"require": "./tsconfig.json"
+	},
+	"sideEffects": false,
+	"homepage": "https://github.com/sapphiredev/utilities/tree/main/packages/ts-config",
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint tests scripts --ext mjs,ts --fix -c ../../.eslintrc",
+		"prebuild": "yarn lint",
+		"build": "tsc -b tests",
+		"prepublishOnly": "node scripts/prepublish.mjs",
+		"postpublish": "node scripts/postpublish.mjs"
+	},
+	"dependencies": {
+		"tslib": "^2.3.1",
+		"typescript": "^4.4.4"
+	},
+	"files": [
+		"tsconfig.json"
+	],
+	"engines": {
+		"node": ">=v14.0.0",
+		"npm": ">=7.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sapphiredev/utilities.git",
+		"directory": "packages/ts-config"
+	},
+	"bugs": {
+		"url": "https://github.com/sapphiredev/utilities/issues"
+	},
+	"keywords": [
+		"sapphiredev",
+		"bot",
+		"typescript",
+		"ts",
+		"yarn",
+		"discord",
+		"sapphire",
+		"standalone"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}

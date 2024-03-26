@@ -1,0 +1,14 @@
+{
+	"extends": "./tsconfig.base.json",
+	"include": [
+		"jest.config.ts",
+		"packages/**/*.mjs",
+		"packages/**/*.ts",
+		"packages/decorators/*.js",
+		"packages/**/*.tsx",
+		"packages/**/jest.config.ts",
+		"packages/**/rollup.config.js",
+		"packages/**/tests/*.js",
+		"scripts"
+	]
+}
